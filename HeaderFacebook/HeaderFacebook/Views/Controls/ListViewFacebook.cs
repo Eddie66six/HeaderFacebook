@@ -43,9 +43,8 @@ namespace HeaderFacebook.Views.Controls
                 //Move a imagem no eixo Y em uma fração da posição Y do ScrollView.
                 ParallaxView.Scale = 1;
                 ParallaxView.TranslationY = y;
-                var teste = HeaderView.Y;
                 if (HeaderView.TranslationY <= 0)
-                    HeaderView.TranslationY = -ScrollY /1.5;
+                    HeaderView.TranslationY = y /1.7;
             }
             else if (Device.OS == TargetPlatform.iOS)
             {
