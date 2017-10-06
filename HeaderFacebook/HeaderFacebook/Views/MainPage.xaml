@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:control="clr-namespace:HeaderFacebook.Views.Controls"
+             x:Class="HeaderFacebook.Views.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="MainPage">
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" x:Name="ParallaxView">
+            <Image
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Source="https://i.pinimg.com/originals/41/f7/d9/41f7d9b7696e969494733d0233eaa56f.jpg"
+                Aspect="AspectFill"/>
+        </StackLayout>
+        <control:ListViewFacebook
+            ParallaxView="{Binding Source={x:Reference ParallaxView}}"
+            HeaderView="{Binding Source={x:Reference HeaderView}}"
+            Grid.Row="0" Grid.RowSpan="3">
+            <Grid RowSpacing="0" ColumnSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout BackgroundColor="White" Grid.Row="1" VerticalOptions="FillAndExpand" Padding="10">
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                    <Label Text="123"></Label>
+                </StackLayout>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="0" BackgroundColor="Aqua" x:Name="HeaderView" Margin="0,-5,0,0">
+                        <Label Text="teste" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </control:ListViewFacebook>
+    </Grid>
+</ContentPage>
